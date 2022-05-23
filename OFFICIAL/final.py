@@ -53,7 +53,7 @@ base_path = "https://ai-multimodal.s3.us-east-2.amazonaws.com"
 # SELECT PROJECT
 
 gc = pygsheets.authorize(service_file='.streamlit/ai-art-farm-2c65230a4396.json')
-sheet = gc.open('AIMultimodal_Database')
+sheet = gc.open('AIMultimodalMVP_Database')
 projects_wks = sheet.worksheet('title', 'projects')
 projects_records = projects_wks.get_all_records()
 projects_list = [project['project_alias'] for project in projects_records]
